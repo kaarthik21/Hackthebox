@@ -1,10 +1,4 @@
 Starting Nmap 7.91 ( https://nmap.org ) at 2021-09-15 02:37 EDT
-Stats: 0:00:15 elapsed; 0 hosts completed (1 up), 1 undergoing NULL Scan
-NULL Scan Timing: About 10.61% done; ETC: 02:39 (0:01:58 remaining)
-Stats: 0:01:51 elapsed; 0 hosts completed (1 up), 1 undergoing NULL Scan
-NULL Scan Timing: About 21.39% done; ETC: 02:46 (0:06:48 remaining)
-Stats: 0:07:22 elapsed; 0 hosts completed (1 up), 1 undergoing NULL Scan
-NULL Scan Timing: About 51.64% done; ETC: 02:51 (0:06:53 remaining)
 Nmap scan report for 10.10.10.247
 Host is up (0.17s latency).
 Not shown: 65530 closed ports
