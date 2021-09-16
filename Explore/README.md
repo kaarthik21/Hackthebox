@@ -42,11 +42,25 @@
 #### [PS: I thought this might be the one and tried inputting the second line as the flag :/ ]
 #### Now we know kristi is a user, so we connect to ssh with *ssh -L 5555:localhost:5555 kristi@10.10.10.247 -p 2222* and the password as the second line  
 
-![image](https://user-images.githubusercontent.com/52716626/133632373-3a4bc765-9c37-4202-803c-a7135489a1ca.png)
+![image](https://user-images.githubusercontent.com/52716626/133634627-bc63269f-3beb-48c0-a726-200c235a9d66.png)
 
 #### Now we search for the flag in some file and boom we found the first flag
 
 ![image](https://user-images.githubusercontent.com/52716626/133633365-86f0bc40-5fe5-4e1a-b1d6-e75013d8c8e0.png)
 
-#### Our next step is to get root privilages to access the unprivilages directories
-#### We initially found that this device is a android phone
+#### Our next step is to get root privilages to access the unprivilaged directories
+#### We initially found that this device is a android phone so we use adb(android debug bridge) to get root access
+#### In our previous ssh command we made a local connecting shell at localhost:5555, we connect adb on localhost:5555 to get our shell
+#### adb connect localhost:5555
+#### adb shell, Or if "error: more than one device/emulator" arrives then adb -s localhost:5555 shell should do the job
+#### After getting into the shell typing su will make u root user
+
+![image](https://user-images.githubusercontent.com/52716626/133638175-8f9ecdcc-a3f0-48f5-9b6a-1f35aba12714.png)
+
+#### We got root privilages now, check /data/root.txt found the 2nd flag.
+
+![image](https://user-images.githubusercontent.com/52716626/133638307-064cf594-de4a-43ef-9c55-841b3918f94b.png)
+
+## And Explore machine is pwned
+
+
