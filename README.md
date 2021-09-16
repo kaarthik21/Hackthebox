@@ -2,13 +2,13 @@
 
 ![image](https://user-images.githubusercontent.com/52716626/133619684-54c392a5-a33f-4015-930a-15c1fbdd862d.png)
 
-#### Given the IP address of the machine, we first scan the open and filtered ports with the using of nmap command as follows:
+#### Given the IP address of the machine, we first scan for open and filtered ports with the using of nmap command as follows:
 #### nmap -sN -Pn -p- -A 10.10.10.245 and add that into a file called nmap.txt
 #### From the scan report we can say that ports 21(ftp), 22(ssh) and 80(http) are open and the operating system is found to be Unix, Linux; CPE: cpe:/o:linux:linux_kernel
 
 ![image](https://user-images.githubusercontent.com/52716626/133619960-e84c6e35-6bab-4926-9f1d-f35bc8066179.png)
 
-#### For connecting into ssh on port 22, we need to find some user credentials through reconnaisance.
+#### For connecting through ssh on port 22, we need to find some user credentials through reconnaisance.
 #### So we use *Gobuster* (tool to find all the sub-domains with a url) with the following command:
 #### gobuster dir -u https://10.10.10.245 -w /usr/share/dirb/wordlists/big.txt
 #### From this report, we can say that /capture, /data, /ip, /netstat subdomains seems to exist
