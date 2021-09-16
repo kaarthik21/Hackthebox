@@ -1,0 +1,21 @@
+===============================================================
+Gobuster v3.1.0
+by OJ Reeves (@TheColonial) & Christian Mehlmauer (@firefart)
+===============================================================
+[+] Url:                     http://10.10.10.245
+[+] Method:                  GET
+[+] Threads:                 10
+[+] Wordlist:                /usr/share/dirb/wordlists/big.txt
+[+] Negative Status codes:   404
+[+] User Agent:              gobuster/3.1.0
+[+] Timeout:                 10s
+===============================================================
+2021/09/14 08:57:16 Starting gobuster in directory enumeration mode
+===============================================================
+/capture              (Status: 302) [Size: 220] [--> http://10.10.10.245/data/7]
+/data                 (Status: 302) [Size: 208] [--> http://10.10.10.245/]      
+/ip                   (Status: 200) [Size: 17381]                               
+/netstat              (Status: 200) [Size: 35821]                               
+===============================================================
+2021/09/14 09:03:47 Finished
+===============================================================
