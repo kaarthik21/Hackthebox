@@ -1,4 +1,8 @@
 # Explore (IP - 10.10.10.247)
+
+![image](https://user-images.githubusercontent.com/52716626/133822845-5c5bf17b-1c3e-4a90-8dc4-5ab608d50b62.png)
+
+
 #### We start our Reconnaisance by scanning the open ports with nmap
 #### A full scan of this ip tells us thats 5 ports (2222, 5555, 42135, 46465, 59777), additionally it says that the device is a phone
 #### (nmap -A -Pn -p- -sN 10.10.10.247)
