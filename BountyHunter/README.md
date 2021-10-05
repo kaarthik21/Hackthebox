@@ -2,7 +2,7 @@
 
 ![image](https://user-images.githubusercontent.com/52716626/136045891-11cdad57-9ed1-49a7-ae2c-a411ec2ca0bb.png)
 
-#### For this machine, we are provided the IP address. When we do the NMAP scan, the standard 22(ssh) and 80(http) portsare found open and stored onto file nmap.txt
+#### For this machine, we are provided the IP address. When we do the NMAP scan, the standard 22(ssh) and 80(http) ports are found open and stored onto file nmap.txt
 
 ![image](https://user-images.githubusercontent.com/52716626/136048219-2db26748-a552-44c5-a8e0-4a902b74e76a.png)
 
