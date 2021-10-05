@@ -10,13 +10,15 @@
 #### In the log_submit.php page, we can give inputs to the machine. Using burp we see the requests we send
 #### Let us input 'test' in all four columns, then burp will output us a data variable with random string
 
-![image](https://user-images.githubusercontent.com/52716626/136048523-6b940633-2fed-4b03-bd98-5f0f3e9d0864.png)
+![image](https://user-images.githubusercontent.com/52716626/136050918-da7c31f4-5b49-4e74-aa2e-5490c357b4f7.png)
+
 
 #### When I tried decoding this string with MD5, Base64, etc Base64 seemed successful as we get an XXE script. When again decoding it with URL decoder we get a readable XXE which is same as the input we give
 #### Now we are going to try the XXE Injection to get the forbidden files and subdomains of the machine
 #### *xxe-attact-db.php.txt* file contains the script to be injected to view db.php 
 
 ![image](https://user-images.githubusercontent.com/52716626/136048641-3e1d1c7b-0a14-4ec7-9985-e99e2260bd58.png)
+![image](https://user-images.githubusercontent.com/52716626/136050971-31c0d496-ca32-4b36-9be5-199804abf26c.png)
 
 #### Now we need to encode this into Base64 and URL encode format, then sending the resulting string into data column in the repeater of Burp will give us a encoded string again
 #### Again decoding this string will give us the db.php file (which is stored into db_output_by_changing_data.php file)
