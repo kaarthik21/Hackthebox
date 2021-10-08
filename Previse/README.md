@@ -10,7 +10,7 @@
 
 ![image](https://user-images.githubusercontent.com/52716626/136501779-cff99b3b-6e3d-4058-9115-e7820b12871d.png)
 
-#### Visiting all the subdomains, nav.php subdomain is found and have status code: 200, so this site is loading and shows the menu of options
+#### Visiting all the subdomains, nav.php subdomain is found and have status code: 200, so this site is loading and shows a menu of options
 
 ![image](https://user-images.githubusercontent.com/52716626/136501910-ab9758f9-222c-4bf5-a8f9-cfec3a1ff1e8.png)
 
