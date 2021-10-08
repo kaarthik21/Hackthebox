@@ -89,6 +89,9 @@
 #### chmod 777 gzip
 #### export PATH=/tmp:$PATH
 #### Now we would get a reverse shell with root user in our host shell
+
+![image](https://user-images.githubusercontent.com/52716626/136508767-13d5fb0f-953c-4d5b-984f-73055c5fb48a.png)
+
 #### root.txt can be found at /root ;)
 ![image](https://user-images.githubusercontent.com/52716626/136508623-6f7a5b56-10f5-4166-97b2-b146efc62b6a.png)
 
