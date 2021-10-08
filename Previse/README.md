@@ -47,4 +47,26 @@
 #### After modifying the delim variable, we need to run 'nc -vlp 9999' in our Host machine's command line to get a reverse shell
 #### (The python code injected will return us a reverse shell only when we are listening to that port)
 
+![image](https://user-images.githubusercontent.com/52716626/136505168-43efd2c6-84c8-424a-aae3-0d6823042052.png)
 
+#### Now that we got a reverse shell, we found user.txt in /home/m4lwhere/ but we got permission denied to cat the file
+#### So our next try is to connect through ssh for which we need a password
+#### From siteBackup/ directory we got config.php file, which contains the credentials for mysql
+#### MYSQL can be connected through 3306 but that port is closed in this case, so we connect to mysql from this reverse shell
+#### config.php:
+
+![image](https://user-images.githubusercontent.com/52716626/136505651-d9485ae9-d3b7-4379-ae4e-c8812908faf4.png)
+
+![image](https://user-images.githubusercontent.com/52716626/136505855-32d4efb3-03c7-48a5-bb0a-c26497bc1a06.png)
+
+#### Going throught the database and viewing table:
+
+![image](https://user-images.githubusercontent.com/52716626/136506069-69ac3a4e-d796-4539-9ee8-f19e22512c75.png)
+
+#### These are the tables created by the user and accounts tables contains some hash to be decoded
+
+![image](https://user-images.githubusercontent.com/52716626/136506211-d4bede02-4e79-4998-ba7f-7ec15b195013.png)
+
+#### 'admin' user is me and 'm4lwhere' user is the owner which we are trying to hack
+#### This hash can either be cracked by john or hashcat, I use hashcat here
+#### hashcat -m 500 hash.txt /usr/share/wordlists/rockyou.txt
