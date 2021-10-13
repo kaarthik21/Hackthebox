@@ -11,8 +11,8 @@
 #### For connecting through ssh on port 22, we need to find some user credentials through reconnaisance.
 #### So we use *Gobuster* (tool to find all the sub-domains with a url) with the following command:
 #### gobuster dir -u https://10.10.10.245 -w /usr/share/dirb/wordlists/big.txt
-#### From this report, we can say that /capture, /data, /ip, /netstat subdomains seems to exist
-#### By visiting through all these sites, /data subdomain seems interesting as it contains some downloadable files.
+#### From this report, we can say that /capture, /data, /ip, /netstat paths seems to exist
+#### By visiting through all these sites, /data path seems interesting as it contains some downloadable files.
 
 ![image](https://user-images.githubusercontent.com/52716626/133620464-71c4887f-16c5-42ca-8584-97d39e56f563.png)
 
