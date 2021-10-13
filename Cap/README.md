@@ -16,7 +16,7 @@
 
 ![image](https://user-images.githubusercontent.com/52716626/133620464-71c4887f-16c5-42ca-8584-97d39e56f563.png)
 
-#### We download the pcal files with id=0 & id=1 with are 0.pcap and 1.pcap
+#### We download the pcap files with id=0 & id=1 with are 0.pcap and 1.pcap
 #### Using the strings command on 0.pcap file (biggest file), we can find the username and password of a specific user
 
 ![image](https://user-images.githubusercontent.com/52716626/133620576-9b69546c-f7d1-4c7d-a5c2-99c57b7b944b.png)
